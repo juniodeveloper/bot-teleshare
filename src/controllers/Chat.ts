@@ -14,11 +14,8 @@ class Chat {
         await ctx.sendMessage('Bots 🤖 não são permitidos aqui.', { reply_to_message_id: message_id })
       } else {
         await ctx.reply(
-          'Bem vindo ' +
-            `[${first_name}](tg://user?id=${id})\n\n` +
-            'Respeite os outros membros e admins.\n\n' +
-            '*🚫 PROIBIDO QUALQUER TIPO DE DIVULGAÇÃO*\n\n' +
-            '⚠️ Fique no canal para ficar por dentro de todas as novidades em nossa plataforma.',
+          '*Bem vindo* ' +
+            `[${first_name}](tg://user?id=${id})\n\n ${welcomeText}`,
           {
             parse_mode: 'Markdown',
             reply_to_message_id: message_id,
@@ -26,8 +23,8 @@ class Chat {
               inline_keyboard: [
                 [
                   {
-                    text: 'Baixe nosso aplicativo',
-                    url: 'https://teumoney.site'
+                    text: 'Canal SoftsApps',
+                    url: 'https://t.me/softsapps_channel'
                   }
                 ]
               ]
@@ -67,3 +64,15 @@ class Chat {
 }
 
 export default new Chat()
+
+const welcomeText: string = '✅ SoftsApps Developer \n\n' +
+'Trabalhamos com as seguintes tecnologias\n\n' +
+'- Flutter - Dart\n\n' +
+'- JavaScript -Typescript\n\n' +
+'- Next.js - React.js\n\n' +
+'- Firebase - MongoDB\n\n' +
+'- Desenvolvimento de API\n\n' +
+'- Micro Serviços\n\n' +
+'- Fazemos instalações de certificado SSL em seu servidor\n\n' +
+'- Configuramos seu servidor para hospedagem de seu site\n\n' +
+'👌 Fazermos integrações de pagamentos para seu comércio ou sistema online.\n\n'
